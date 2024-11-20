@@ -4,16 +4,16 @@
 
 let js = "Amazing";
 
-// if (js === "Amazing") {
-//     alert("JavaScript is FUN!");
-// } else {
-//     alert("JavaScript is POOP!");
-// };
+if (js === "Amazing") {
+  alert("JavaScript is FUN!");
+} else {
+  alert("JavaScript is POOP!");
+}
 
 let number = 40 + 8 + 23 - 10;
 
-// console.log("The result of the calculation is: " + number);
-// alert("The result of the calculation is: " + number);
+console.log("The result of the calculation is: " + number);
+alert("The result of the calculation is: " + number);
 
 // Lecture 2 - variables and values
 
@@ -38,41 +38,47 @@ let region = "England";
 // let region = "America";
 // let region = "Japan";
 
-let printed_name = nameFormat(region)
+let printed_name = nameFormat(region);
 
-function nameFormat (region) {
-    if (region === "England") {
-        let fullName = firstName + " " + middleName + " " + lastName;
-        console.log(fullName);
-        return fullName;
-    }
-    
-    if (region === "America") {
-        let fullName = middleName + " " + firstName + " " + lastName;
-        console.log(fullName);
-        return fullName;
-    }
-    
-    if (region === "Japan") {
-        let fullName = lastName + " " + firstName + " " + middleName;
-        console.log(fullName);
-        return fullName;
-    }
+function nameFormat(region) {
+  if (region === "England") {
+    let fullName = firstName + " " + middleName + " " + lastName;
+    console.log(fullName);
+    return fullName;
+  }
+
+  if (region === "America") {
+    let fullName = middleName + " " + firstName + " " + lastName;
+    console.log(fullName);
+    return fullName;
+  }
+
+  if (region === "Japan") {
+    let fullName = lastName + " " + firstName + " " + middleName;
+    console.log(fullName);
+    return fullName;
+  }
 }
 
 console.log("Full name in: " + region + " is: " + printed_name);
 
 const PI = 3.1471;
-
+console.log(PI);
 
 // Challenge 1 - Values and Variables
 let country = "Japan";
 let continent = "Asia";
-// let population = "124,352,000";
+let population = "124,352,000";
 population = 124352000;
 
-let print_string = "My country is " + country + " in the continent of " + continent + " and it has a population of " + population + ".";
-
+let print_string =
+  "My country is " +
+  country +
+  " in the continent of " +
+  continent +
+  " and it has a population of " +
+  population +
+  ".";
 
 // Challenge 2 - Data Types
 let isIsland = true;
@@ -83,9 +89,9 @@ let language;
 let print_string_2 = "";
 
 if (isIsland) {
-    print_string_2 = country + " is an island."
+  print_string_2 = country + " is an island.";
 } else {
-    print_string_2 = country + " is not an island."
+  print_string_2 = country + " is not an island.";
 }
 
 console.log(print_string);
@@ -113,7 +119,6 @@ console.log(typeof language);
 
 // This is a JS bug that says that the type of null is Object, but this is not true, just ignore this if it comes up in the future, it has never been fixed for legacy preservation issues
 console.log(typeof null);
-
 
 // Challenge 3
 // let, var, and const
@@ -152,21 +157,20 @@ lastName = "McCann";
 console.log(lastName);
 console.log(typeof lastName);
 
-
 // Challenge 4 Operators
 // Operators allow us to perform calculations and comparisons etc
 
 // Mathematcial Operators
 // + - / // * **
-const currentYear = 2024
+const currentYear = 2024;
 const ageMichael = currentYear - 1988;
 const ageAyako = currentYear - 1985;
-console.log("Michael's age in " + currentYear + " is " + ageMichael); 
+console.log("Michael's age in " + currentYear + " is " + ageMichael);
 console.log("Ayako's age in " + currentYear + " is " + ageAyako);
 
 console.log("Both age's together are: " + (ageAyako + ageMichael));
-console.log("Michael's age times 2 is " + (ageMichael * 2));
-console.log("The ages divided by each other is: " + (ageMichael / ageAyako));
+console.log("Michael's age times 2 is " + ageMichael * 2);
+console.log("The ages divided by each other is: " + ageMichael / ageAyako);
 
 const firstName3 = "Michael";
 const lastName3 = "McCann";
@@ -182,15 +186,16 @@ let x = 10 + 5;
 
 // == equivalence operator
 function isX15() {
-    if (x == 15) {
-        message = "x is 15!";
-        console.log("x is 15!");
-        return message;
-    } else {
-        message = "x is not 15!";
-        console.log("x is not 15!")
-        return message;
-    };
+  let message;
+  if (x == 15) {
+    message = "x is 15!";
+    console.log("x is 15!");
+    return message;
+  } else {
+    message = "x is not 15!";
+    console.log("x is not 15!");
+    return message;
+  }
 }
 
 let result = isX15(x);
@@ -200,14 +205,14 @@ x += 10;
 
 console.log(x);
 result = isX15(x);
-// console.log(result);
+console.log(result);
 
 // x ++ is the same as x += 1
-x ++;
+x++;
 console.log(x);
 
 // x -- is the same as x -= 1
-x --;
+x--;
 console.log(x);
 
 // Comparison Operators
@@ -217,8 +222,8 @@ console.log(x);
 console.log(ageMichael == ageAyako);
 console.log(ageMichael === ageAyako);
 console.log(ageMichael != ageAyako);
-console.log(ageAyako > ageMichael); 
-console.log(ageAyako < ageMichael); 
+console.log(ageAyako > ageMichael);
+console.log(ageAyako < ageMichael);
 console.log(ageAyako >= 39);
 
 // However, we could write the code for this calculation could be written directly into the console online as it has access to all of the variables running at the moment in that environment, this can be good to perform quick testing
@@ -226,10 +231,9 @@ console.log(ageAyako >= 39);
 let result2 = ageAyako == ageMichael;
 console.log(result2);
 
-
 // Challenge 5 Operator Precedence
 // We can check the exact operator precedence value of all operators by looking at the MDN (Mozilla Developer Network) resources
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence
+//developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence
 
 var now = 2037;
 const ageJonas = now - 1991;
@@ -250,7 +254,6 @@ const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas);
 console.log(ageSarah);
 console.log(averageAge);
-
 
 // CODING CHALLENGE NUMBER 1
 
@@ -285,25 +288,24 @@ markHigherBMI = BMIMark > BMIJohn;
 console.log(markHigherBMI);
 
 let massAyako = 58;
-let heightAyako = 1.50;
+let heightAyako = 1.5;
 
 console.log(massAyako);
 console.log(heightAyako);
 
-BMIAyako = massAyako / (heightAyako * heightAyako);
+const BMIAyako = massAyako / (heightAyako * heightAyako);
 
-console.log(BMIAyako)
+console.log(BMIAyako);
 
 let massMichael = 92;
-let heightMichael = 1.70;
+let heightMichael = 1.7;
 
 console.log(massMichael);
 console.log(heightMichael);
 
-BMIMichael = massMichael / (heightMichael * heightMichael);
+const BMIMichael = massMichael / (heightMichael * heightMichael);
 
 console.log(BMIMichael);
-
 
 const firstName2 = "Michael";
 const job2 = "Programmer";
@@ -313,17 +315,27 @@ const now2 = 2037;
 // JS will convert a type such an number into a string format so it can be concatenated into the string below, this is called type coercion
 
 // This is an example of more classic string concatenation, it can be confusing to read because of the breaking up of the information
-const michael = "I am " + firstName2 + " and I am a " + job2 + ", and I am " + (now2 - birthYear + " years old!");
+const michael =
+  "I am " +
+  firstName2 +
+  " and I am a " +
+  job2 +
+  ", and I am " +
+  (now2 - birthYear + " years old!");
 console.log(michael);
 
 // From ES6 onwards, we can use template literals instead of doing this string concatenation, which is a lot easier to use and understand
 
 // We enclose the entire string in backticks `` and then any varibales have to be within ${}, these type of strings are called tempate literals
-constMichaelNew = `I am ${firstName2} and I am a ${job2}, and I am ${(now2 - birthYear)} years old!`;
+const michaelNew = `I am ${firstName2} and I am a ${job2}, and I am ${
+  now2 - birthYear
+} years old!`;
 
-console.log(constMichaelNew);
+console.log(michaelNew);
 
-console.log(`This is my string without quotation marks and instead backticks, this helps because we don't need to worry about conflicting quotation marks and it is easier to insert a variable if we need to later on`);
+console.log(
+  `This is my string without quotation marks and instead backticks, this helps because we don't need to worry about conflicting quotation marks and it is easier to insert a variable if we need to later on`
+);
 
 // Multi-line string
 // Before ES6 we had to add \n to add a newline every time we wanted a new line.
@@ -336,9 +348,7 @@ lines`);
 
 console.log(`String with
 multiple
-lines`
-);
-
+lines`);
 
 // If/ Else statements
 // The condition specified in the parentheses has to evaluate to a truthy or falsey value
@@ -351,30 +361,37 @@ let isOldEnough = personAge > legalAge;
 let sentenceEnd;
 
 if (isOldEnough) {
-    console.log(`${personName2} is old enough to get a driving license.`);
+  console.log(`${personName2} is old enough to get a driving license.`);
 } else if (personAge == 18) {
-    console.log(`${personName2} is exactly 18, they are just about old enough to get a driving license.`);
+  console.log(
+    `${personName2} is exactly 18, they are just about old enough to get a driving license.`
+  );
 } else {
-    let extraS = (legalAge - personAge) != 1;
-    if (extraS) {
-        sentenceEnd = "years!";
-    } else {
-        sentenceEnd = "year!";
-    };
-    console.log(`${personName2} is not old enough to get a driving license yet. Please wait for ${(legalAge - personAge)} ${sentenceEnd}`);
-};
+  let extraS = legalAge - personAge != 1;
+  if (extraS) {
+    sentenceEnd = "years!";
+  } else {
+    sentenceEnd = "year!";
+  }
+  console.log(
+    `${personName2} is not old enough to get a driving license yet. Please wait for ${
+      legalAge - personAge
+    } ${sentenceEnd}`
+  );
+}
 
 let birthYear2 = 1988;
 let birthCentury;
 
 if (birthYear2 <= 2000) {
-    birthCentury = "20th";
+  birthCentury = "20th";
 } else {
-    birthCentury = "21st";
-};
+  birthCentury = "21st";
+}
 
-console.log(`${personName2} was born in the ${birthCentury} century, in the year ${birthYear2}`);
-
+console.log(
+  `${personName2} was born in the ${birthCentury} century, in the year ${birthYear2}`
+);
 
 // CODING CHALLENGE 2
 
@@ -390,11 +407,10 @@ console.log(BMIMark2, BMIJohn2);
 // Print an message to the user depending on which BMI is higher
 
 if (BMIMark2 > BMIJohn2) {
-    console.log(`Mark's BMI (${BMIMark2}) is higher than John's (${BMIJohn2})!`);
+  console.log(`Mark's BMI (${BMIMark2}) is higher than John's (${BMIJohn2})!`);
 } else {
-    console.log(`John's BMI (${BMIJohn2}) is higher than John's (${BMIMark2})!`);
+  console.log(`John's BMI (${BMIJohn2}) is higher than John's (${BMIMark2})!`);
 }
-
 
 // Type coercion and conversion
 // i.e. changing one type into another when we want them to
@@ -427,7 +443,7 @@ console.log(convertedName);
 console.log(typeof convertedName);
 
 // We can also convert something to string using the String() method
-stringYear = String(digitYear);
+const stringYear = String(digitYear);
 console.log(stringYear);
 console.log(typeof stringYear);
 
@@ -451,7 +467,6 @@ let n = "1" + 1;
 n = n - 1;
 console.log(n);
 
-
 // Truthy and Falsey values
 
 // Falsey values are not exactly false but will become false when converted to a Boolean, these are:
@@ -460,8 +475,8 @@ console.log(n);
 // Everything else will be considered a Truthy value as they will evaluate to True when converted to a Boolean
 
 // We can convert values to Boolean using the Boolean() method when we want to do type conversion, but in reality, we almost never do this, usually it happens in if else statements etc as implicit type coercion
- 
-console.log("Truthy and Falsey values")
+
+console.log("Truthy and Falsey values");
 console.log("");
 
 console.log(`Number 0: ${Boolean(0)}`);
@@ -480,21 +495,21 @@ console.log(`Null: ${Boolean(null)}`);
 // If moneyInDollars is 0, it will evaluate to false in the if block later
 // let moneyInDollars = 0;
 // If moneyInDollars is not 0, it will be evaluated to true in the if block later as long as it has a valid value
-let moneyInDollars = 100
+let moneyInDollars = 100;
 
-function changeMoney (amount) {
-    moneyInDollars = amount;
-    return moneyInDollars;
+function changeMoney(amount) {
+  moneyInDollars = amount;
+  return moneyInDollars;
 }
 
 function checkMoney(moneyInDollars) {
-    if (moneyInDollars) {
-        let message = `You have ${moneyInDollars} dollars`;
-        return message;
-    } else {
-        let message = "Go away POORO!"
-        return message;
-    };
+  if (moneyInDollars) {
+    let message = `You have ${moneyInDollars} dollars`;
+    return message;
+  } else {
+    let message = "Go away POORO!";
+    return message;
+  }
 }
 
 let result3 = checkMoney(moneyInDollars);
@@ -515,15 +530,15 @@ let height = 0;
 
 // To get around this I have converted height to a String if it is actually 0 on purpose, though this is not ideal as we can no longer use the number 0 as a falsely value
 if (height === 0) {
-    height = String(height);
-};
+  height = String(height);
+}
 
 if (height) {
-    console.log("Height is defined");
+  console.log("Height is defined");
 } else {
-    console.log("Height is UNDEFINED");
-    console.log(typeof height);
-};
+  console.log("Height is UNDEFINED");
+  console.log(typeof height);
+}
 
 // The triple equal sign checks for value and type equality at the same time, this is known as the strict equality operator
 let ageOfAyako = 39;
@@ -537,32 +552,33 @@ if (ageOfAyako == 39) console.log("Ayako is 39 years old.");
 // The loose equality operator is usually avoided as much as possible, as it can introduce a lot of bugs and odd behaviour into the code, the strict equality operator is much safer to use so should be defaulted to as much as possible
 
 // Prompt allows an input box to be generated for the user on the webpage
-userNumber = prompt("What is your favourite number?");
+let userNumber = prompt("What is your favourite number?");
 console.log(userNumber);
 console.log(typeof userNumber);
 
 if (userNumber == 23) {
-    console.log("Cool, 23 is an amazing number!");
-};
+  console.log("Cool, 23 is an amazing number!");
+}
 
 // This one wouldn't work on its own as the prompt function grabs a string not a number, to get around this we would have to convert the captured string into a number
 userNumber = Number(userNumber);
 if (userNumber === 23) {
-    console.log("Cool, 23 is an amazing number!");
+  console.log("Cool, 23 is an amazing number!");
 } else if (userNumber === 42) {
-    console.log("How many roads must a man walk down?");
+  console.log("How many roads must a man walk down?");
 } else if (userNumber === 7) {
-    console.log("Lucky number 7!");
+  console.log("Lucky number 7!");
 } else {
-    console.log(`I don't know what to say about ${userNumber}, it don't seem like any good kind of number to me...`);
-};
+  console.log(
+    `I don't know what to say about ${userNumber}, it don't seem like any good kind of number to me...`
+  );
+}
 
 // The inequality operator (different operator) is used to check if things are not equal, there are strict !== and non=strict != versions of this, again we should endevaour to use !== as much as possible
 
 if (userNumber !== 9) {
-    console.log("Why not number 9?");
-};
-
+  console.log("Why not number 9?");
+}
 
 // BOOLEAN OPERATORS
 
@@ -571,21 +587,21 @@ if (userNumber !== 9) {
 let sarahLicense = true;
 let sarahEyesight = true;
 
-canSarahDrive = (sarahLicense && sarahEyesight);
+let canSarahDrive = sarahLicense && sarahEyesight;
 
 console.log(`Can Sarah drive? ${canSarahDrive}`);
 
 // OR ||
 
-canSarahDrive = (sarahLicense || sarahEyesight);
+canSarahDrive = sarahLicense || sarahEyesight;
 
 console.log(`Can Sarah Drive? ${canSarahDrive}`);
 
 // NOT ! operator, inverts the value of a Boolean e.g. true -> false
 
 let age2 = 16;
-testA = age2 >= 20;
-testB = age2 < 30;
+const testA = age2 >= 20;
+const testB = age2 < 30;
 
 console.log(testA);
 console.log(!testA);
@@ -601,9 +617,8 @@ console.log(!testA && testB);
 let isTired = false;
 let isDrunk = true;
 
-let shouldDrive = (sarahLicense && sarahEyesight && !isTired && !isDrunk);
+let shouldDrive = sarahLicense && sarahEyesight && !isTired && !isDrunk;
 console.log(`Should Sarah be allowed to drive? ${shouldDrive}`);
-
 
 // CODING CHALLENGE 3
 
@@ -623,15 +638,16 @@ console.log(minKoalas);
 // Comparison logic to see which team(s) win the trophy
 // Teams have to score more than the minScore in order to qaulify for the ability to win the trophy
 if (scoreDolphins === scoreKoalas && minDolphins && minKoalas) {
-    console.log("Both teams win the trophy");
+  console.log("Both teams win the trophy");
 } else if (scoreDolphins > scoreKoalas && minDolphins) {
-    console.log("Dolphins win the trophy");
+  console.log("Dolphins win the trophy");
 } else if (scoreKoalas > scoreDolphins && minKoalas) {
-    console.log("Koalas win the trophy");
+  console.log("Koalas win the trophy");
 } else {
-    console.log(`Sadly, no-one hit the minimum score of ${minScore}, so there are no trophy winners today!`);
-;}
-
+  console.log(
+    `Sadly, no-one hit the minimum score of ${minScore}, so there are no trophy winners today!`
+  );
+}
 
 // Switch case statements
 
@@ -639,7 +655,7 @@ if (scoreDolphins === scoreKoalas && minDolphins && minKoalas) {
 
 // Then for each case, we specify the value to check against and the code that runs in that case, we use case followed by the value, then a COLON, then the code to execute
 
-// If we want multiple cases to run the same code we can define them one above the other like in the case of Wednesday and Thursday and Saturday and Sunday. 
+// If we want multiple cases to run the same code we can define them one above the other like in the case of Wednesday and Thursday and Saturday and Sunday.
 
 // We need to put in a break statement once the code for a case has been executed, as switch case blocks act as a kind of loop that needs to be broken out of when done. The default block does not need to be broken out of, it is effcetively used as a fail state
 
@@ -649,96 +665,93 @@ if (scoreDolphins === scoreKoalas && minDolphins && minKoalas) {
 
 let day = "Monday";
 
-switch(day) {
-    case"Monday": 
-        console.log("It's time for work!");
-        break;
-    case"Tuesday":
-        console.log("Time for pie night!");
-        break;
-    case"Wednesday":
-    case"Thursday":
-        console.log("Prepare for your beekeeping examination!");
-        break;
-    case "Friday": 
-        console.log("Prepare for the meeting with Mr. Kawalski");
-        break;
-    case "Saturday":
-    case "Sunday":
-        console.log("Enjoy your weekend!");
-        break;
-    default: 
-        console.log("Not a valid day!");
-};
+switch (day) {
+  case "Monday":
+    console.log("It's time for work!");
+    break;
+  case "Tuesday":
+    console.log("Time for pie night!");
+    break;
+  case "Wednesday":
+  case "Thursday":
+    console.log("Prepare for your beekeeping examination!");
+    break;
+  case "Friday":
+    console.log("Prepare for the meeting with Mr. Kawalski");
+    break;
+  case "Saturday":
+  case "Sunday":
+    console.log("Enjoy your weekend!");
+    break;
+  default:
+    console.log("Not a valid day!");
+}
 
 // This is the same code written out in else if else statements, it looks more concise unless there are more than one thing running for each day, in which case it would be much longer
 
 day = "Sunday";
 
 if (day === "Monday") {
-    console.log("It's time for work!");
+  console.log("It's time for work!");
 } else if (day === "Tuesday") {
-    console.log("Time for pie night!");
+  console.log("Time for pie night!");
 } else if (day === "Wednesday" || day === "Thursday") {
-    console.log("Prepare for your beekeeping examination!");
+  console.log("Prepare for your beekeeping examination!");
 } else if (day === "Friday") {
-    console.log("Prepare for the meeting with Mr. Kawalski");
+  console.log("Prepare for the meeting with Mr. Kawalski");
 } else if (day === "Saturday" || day === "Sunday") {
-    console.log("Enjoy your weekend!");
+  console.log("Enjoy your weekend!");
 } else {
-    console.log("Not a valid day!");
-};
+  console.log("Not a valid day!");
+}
 
 // Switch cases try to avoid writing the same code snippets over and over, they are best used when there is a fairly limited number of available values for a variable, similar to an enum in ust for example, they are also designed to be more readable though this is a matter of opinion
 
 // The switch case is becoming less common but can still be an important and useful tool to know and use
 
-
 // CONDITIONAL OPERATOR (TERNARY ?)
 
 // We can use the ternary operator as shorthand for an if else statement, we use the conditional operator ? to do the job of a let or else kind of function from Rust
 
-
 // We might need to put everything in the same block so we can access the variables that we need from this situation
 {
-    let age2 = 13;
-    age2 >= 18 ? console.log("wine") :
-    console.log("water");
-    
-    // An operator is an expression and always produces a value, so we can use it to conditionally declare variables
-    
-    let canDrink = age2 >= 18 ? true :
-    false;
-    
-    console.log(canDrink);
-    
-    // We can save a lot of time and space by using the ternary operator in this way
-    
-    let drink2;
-    
-    if (age2 >= 18) {
-        drink2 = "wine";
-    } else {
-        drink2 = "water";
-    }
-    
-    console.log(drink2);
+  let age2 = 13;
+  age2 >= 18 ? console.log("wine") : console.log("water");
 
-    // We can use ternary operator statements in template literals, unlike if statements etc. which cannot be used as placeholder values in a template literal
+  // An operator is an expression and always produces a value, so we can use it to conditionally declare variables
 
-    console.log(`I like to drink ${age2 >= 18 ? "wine." :
-        "water."}`);
+  let canDrink = age2 >= 18 ? true : false;
 
-    // Be careful with the formatting here, we don't need to repeat things like console.log because we are just trying to give the string we want to print out a value using the ternary operator expression.
+  console.log(canDrink);
+
+  // We can save a lot of time and space by using the ternary operator in this way
+
+  let drink2;
+
+  if (age2 >= 18) {
+    drink2 = "wine";
+  } else {
+    drink2 = "water";
+  }
+
+  console.log(drink2);
+
+  // We can use ternary operator statements in template literals, unlike if statements etc. which cannot be used as placeholder values in a template literal
+
+  console.log(`I like to drink ${age2 >= 18 ? "wine." : "water."}`);
+
+  // Be careful with the formatting here, we don't need to repeat things like console.log because we are just trying to give the string we want to print out a value using the ternary operator expression.
 }
 
 // The ternary operator example is considered easier to read and a lot more concise than writing if else blocks which are verbose in comparison, however, it is not thought of as a replacement for if else because it is only really good for making quick decisions like in a template literal, for more advanced logic if else can be more robust.
 
-
 // CODING CHALLENGE 4
 
 let bill = 430;
-let tip = bill >= 50 && bill <= 300 ? bill * 0.15: bill * 0.2;
+let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value was ${bill + tip}`);
-
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value was ${
+    bill + tip
+  }`
+);
