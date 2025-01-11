@@ -755,3 +755,6 @@ console.log(
     bill + tip
   }`
 );
+
+const testVariable = "true";
+console.log(testVariable);
